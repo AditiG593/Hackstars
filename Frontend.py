@@ -21,7 +21,7 @@ server = app.server  # for deployment
 # Data generation functions
 def generate_client_data():
     try:
-        df = pd.read_csv('C:/Users/SHRUTI-NIDHI/OneDrive/Desktop/static_client_data.csv')
+        df = pd.read_csv('static_client_data.csv')
        # Debug print
         df = df.head(10)
         df['preferred_asset_classes'] = df['preferred_asset_classes'].apply(eval)
@@ -35,7 +35,7 @@ def generate_client_data():
 
 def generate_time_series_data(client_id, months=36):
     try:
-        df = pd.read_csv('C:/Users/SHRUTI-NIDHI/OneDrive/Desktop/time_series_data.csv')
+        df = pd.read_csv('time_series_data.csv')
         client_data = df[df['client_id'] == client_id].sort_values('month').tail(months)
         return client_data[[
             'month', 'portfolio_value', 'equity_allocation_pct', 'fixed_income_allocation_pct',
@@ -50,7 +50,7 @@ def generate_time_series_data(client_id, months=36):
 
 def generate_asset_allocation(client_id):
     try:
-        df = pd.read_csv('C:/Users/SHRUTI-NIDHI/OneDrive/Desktop/static_client_data.csv')
+        df = pd.read_csv('static_client_data.csv')
         client_data = df[df['client_id'] == client_id].iloc[0]
         preferred_assets = eval(client_data['preferred_asset_classes'])
         allocation = []
@@ -75,7 +75,7 @@ def generate_asset_allocation(client_id):
 def generate_forecast(client_id, time_series):
     try:
         # Load the predicted data
-        encoded_data = pd.read_csv("C:/Users/SHRUTI-NIDHI/OneDrive/Desktop/merged_predictions.csv")
+        encoded_data = pd.read_csv("merged_predictions.csv")
         # Debug: Print column names and first few rows
         print("Columns in merged_predictions.csv:", encoded_data.columns.tolist())
         print("First few rows of merged_predictions.csv:\n", encoded_data.head())
