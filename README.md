@@ -10,3 +10,5 @@ This project aims to assist financial advisors and institutions by:
 - 📈 **Forecasting** future portfolio values (for Year 1, 2, and 3)
 - 🧭 **Classifying** clients into suitable investment strategies (Conservative, Balanced, Aggressive)
 - 🌍 Simulating **macroeconomic scenario impacts** on client portfolios
+
+<img src="https://github.com/AditiG593/Hackstars/blob/main/Assets/Classification_XGBoost.png" width="400" height="400" />
