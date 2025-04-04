@@ -12,7 +12,7 @@ from sklearn.preprocessing import StandardScaler, LabelEncoder, PolynomialFeatur
 from sklearn.metrics import accuracy_score, classification_report
 
 # Load dataset
-df = pd.read_csv("C:/Users/SHRUTI-NIDHI/OneDrive/Desktop/encoded.csv")
+df = pd.read_csv("encoded.csv")
 
 # Define Features & Target
 features = [
