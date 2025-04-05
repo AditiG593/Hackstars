@@ -34,7 +34,7 @@ Macro scenarios
 
 
 ## 🏷️ Classification Models
-### 🚀Multilayer Perceptron (MLP)
+### Multilayer Perceptron (MLP)
 This model uses a neural network to classify clients into the most suitable investment strategy based on their financial behavior and goals. It captures complex patterns in data, making the strategy recommendation smarter and more personalized.
 
 ### Logistic Regression
